@@ -32,12 +32,14 @@ document.querySelector('.check').addEventListener('click',function()
     if(!guess)
     {
         document.querySelector('.message').textContent='No Number Found!!!';
-    }
+    }//When No Input
 
     else if(guess===secretNumber)
     {
         document.querySelector('.message').textContent='Correct Number!';
-    }
+        document.querySelector('body').style.backgroundColor='#60b347';
+        document.querySelector('.number').style.width='30rem'
+    }//When Player Wins
 
     else if(guess>secretNumber)
     {
@@ -52,7 +54,7 @@ document.querySelector('.check').addEventListener('click',function()
             document.querySelector('.message').textContent='You Lost the game';
             document.querySelector('.score').textContent=0;
         }
-    }
+    }//When Guess is too high
     else if(guess<secretNumber)
     {
         if(score>1)
@@ -66,6 +68,6 @@ document.querySelector('.check').addEventListener('click',function()
             document.querySelector('.message').textContent='You Lost the game';
             document.querySelector('.score').textContent=0;
         }
-    }
+    }//When Guess is too Low
 });
 
