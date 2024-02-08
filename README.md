@@ -1,2 +1,1 @@
-# JavaNewpractice
- 
+"# javascript-new" 
